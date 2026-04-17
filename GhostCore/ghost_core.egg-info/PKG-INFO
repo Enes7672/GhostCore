@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: ghost-core
+Version: 4.2.0
+Summary: GhostCore — Autonomous Agent Engine with Redline Architecture
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: crewai
+Requires-Dist: langchain-core
+Requires-Dist: langchain-community
+Requires-Dist: langchain-openai
+Requires-Dist: rich
+Requires-Dist: psutil
+Requires-Dist: httpx
+Requires-Dist: python-dotenv
+Requires-Dist: pandas
+Requires-Dist: openpyxl
+Requires-Dist: aiofiles
+Requires-Dist: ruff
+Requires-Dist: mypy
+Requires-Dist: bandit
+Requires-Dist: radon
+Requires-Dist: pytest

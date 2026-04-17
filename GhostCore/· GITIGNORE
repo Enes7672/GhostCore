@@ -1,0 +1,78 @@
+# =============================================================================
+# GhostCore v4 — .gitignore
+# =============================================================================
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- Ortam & Gizli Anahtarlar ---
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+secrets/
+
+# --- Yerel Model Ağırlıkları (Whisper, GGUF, vb.) ---
+models/
+*.bin
+*.gguf
+*.ggml
+*.safetensors
+*.pt
+*.pth
+*.onnx
+
+# --- Whisper / Ses Geçici Dosyaları ---
+*.wav
+*.mp3
+*.mp4
+*.m4a
+audio_buffer/
+transcripts/
+
+# --- Vektör Veritabanı (ilerideki long-term memory için) ---
+chroma_db/
+vector_store/
+*.index
+*.faiss
+
+# --- Log Dosyaları ---
+*.log
+logs/
+
+# --- IDE & Editor ---
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# --- Virtual Environments ---
+venv/
+.venv/
+env/
+.env_backup/
+
+# --- Test Çıktıları ---
+.coverage
+htmlcov/
+coverage.xml
+
+# --- Geçici Dosyalar ---
+tmp/
+temp/
+*.tmp
+*.bak

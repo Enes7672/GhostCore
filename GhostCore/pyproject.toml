@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ghost-core"
+version = "4.2.0"
+description = "GhostCore — Autonomous Agent Engine with Redline Architecture"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "crewai",
+    "langchain-core",
+    "langchain-community",
+    "langchain-openai",
+    "rich",
+    "psutil",
+    "httpx",
+    "python-dotenv",
+    "pandas",
+    "openpyxl",
+    "aiofiles",
+    "ruff",
+    "mypy",
+    "bandit",
+    "radon",
+    "pytest",
+    "pytest-asyncio",
+    "duckduckgo-search",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+
+[project.scripts]
+ghostcore = "main:main"
+ghostcore-engine = "ghost_core.engine:GhostCore"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ghost_core*"]
+
+[tool.mypy]
+ignore_missing_imports = true

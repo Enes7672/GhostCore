@@ -1,0 +1,87 @@
+# =============================================================================
+# GhostCore v4 — Nova Jarvis: Redline Architecture
+# Requirements File
+#
+#- [x] **Phase 1: Environment Setup**
+#    - [x] Install dependencies (`fastapi`, `uvicorn`, `python-multipart`, `websockets`)
+#    - [x] Update `Requirements.txt`
+#    - [x] Run: `pip install -r requirements.txt`
+#
+# PREREQUISITES (must be installed separately):
+#   - Ollama: https://ollama.ai  →  `ollama pull llama3:8b` or `ollama pull phi3`
+#   - ffmpeg (for Whisper audio processing):
+#       Ubuntu/Debian : sudo apt install ffmpeg
+#       macOS         : brew install ffmpeg
+#       Windows       : https://ffmpeg.org/download.html
+# =============================================================================
+
+# --- Core AI Framework ---
+# CrewAI orchestrates the multi-agent pipeline (The Phantom Four)
+crewai==0.28.8
+
+# LangChain core abstractions (chains, prompts, base classes)
+langchain==0.1.20
+
+# LangChain community integrations — includes ChatOllama for local LLM
+langchain-community==0.0.38
+langchain-openai==0.1.7
+duckduckgo-search==5.3.0
+
+# --- Local LLM Backend ---
+# Python client for Ollama REST API (used as a health-check utility)
+ollama==0.1.9
+
+# --- Audio Processing (Sentinel Module) ---
+# API Gateway
+fastapi==0.111.0
+uvicorn==0.29.0
+python-multipart==0.0.9
+websockets==12.0
+
+# OpenAI Whisper — runs 100% locally, no API key needed
+openai-whisper==20231117
+
+# Real-time audio capture from microphone
+sounddevice==0.4.6
+
+# Numerical processing for audio buffers
+numpy==1.26.4
+
+# Data analysis and Excel reporting (Data Maestro)
+pandas==2.2.2
+openpyxl==3.1.5
+
+# --- Async & Utilities ---
+# Python async HTTP client (used for Ollama health checks)
+httpx==0.27.0
+
+# Rich terminal output — for clean CLI formatting
+rich==13.7.1
+
+# Environment variable management
+python-dotenv==1.0.1
+
+# --- Dev / QA (optional but recommended) ---
+# Static analysis for The Hunter agent's code auditing tasks
+bandit==1.7.8
+
+# Code formatting
+black==24.4.2
+
+# Type checking
+mypy==1.10.0
+
+# System resource monitoring (used by brain.py sidebar stats)
+psutil>=5.9.0
+pytest-asyncio==1.3.0
+
+# ---------------------------------------------------------------------------
+# OPTIONAL — sadece ihtiyaç duyulanğunda kur
+# ---------------------------------------------------------------------------
+
+# ChromaDB vektör DB (Experience Ledger)
+# .env'de MEMORY_BACKEND=chromadb olarak ayarla
+# chromadb>=0.5.0
+
+# Sandbox için Docker (SandboxExecutor docker modu)
+# docker SDK gerekmez; sadece Docker servisi çalışıyor olmalı

@@ -1,0 +1,16 @@
+crewai
+langchain-core
+langchain-community
+langchain-openai
+rich
+psutil
+httpx
+python-dotenv
+pandas
+openpyxl
+aiofiles
+ruff
+mypy
+bandit
+radon
+pytest

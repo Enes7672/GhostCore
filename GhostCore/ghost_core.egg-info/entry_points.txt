@@ -1,0 +1,3 @@
+[console_scripts]
+ghostcore = main:main
+ghostcore-engine = ghost_core.engine:GhostCore
